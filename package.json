@@ -1,0 +1,14 @@
+{
+  "name": "conchk",
+  "version": "1.0.0",
+  "description": "Internet connection checker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lance Ball <lanceball@gmail.com> (lanceball.com)",
+  "license": "MIT",
+  "dependencies": {
+    "winston": "^1.0.1"
+  }
+}
