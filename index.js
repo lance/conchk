@@ -44,7 +44,6 @@ function Check(host, port, options) {
         winston.remove(winston.transports.Console);
       }
       if (options.filename) {
-        console.log("ADDING FILE " + options.filename);
         winston.add(winston.transports.File, { filename: options.filename });
       }
     }

@@ -1,6 +1,6 @@
 {
   "name": "conchk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Internet connection checker",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "Lance Ball <lanceball@gmail.com> (lanceball.com)",
   "license": "MIT",
   "dependencies": {
-    "winston": "^1.0.1"
+    "winston": "1.0.1"
   }
 }
