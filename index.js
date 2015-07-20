@@ -36,17 +36,24 @@ function Check(host, port, options) {
 
   function initLog(options) {
     var winston = require('winston');
-    winston.remove(winston.transports.Console);
-    winston.add(winston.transports.Console, { colorize:true, timestamp:true });
+    var transports = [];
+
+    // add console transport by default
+    transports.push(new (winston.transports.Console)({colorize:true, timestamp:true}));
 
     if (options) {
       if (options.silent-console) {
-        winston.remove(winston.transports.Console);
+        // nope - no console
+        transports.shift();
       }
       if (options.filename) {
-        winston.add(winston.transports.File, { filename: options.filename });
+        // also log to a file
+        transports.push(new (winston.transports.File)({ filename: options.filename }));
       }
     }
-    return winston;
+
+    return new (winston.Logger)({
+      transports: transports
+    });
   }
 }
